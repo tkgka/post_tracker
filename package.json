@@ -35,5 +35,9 @@
     "typescript": "~3.9.3",
     "vue-cookies": "^1.7.4",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/tkgka/post_tracker",
+  "author": "tkgka <ksh17171@gmail.com>",
+  "license": "MIT"
 }

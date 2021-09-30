@@ -174,7 +174,7 @@ export default Vue.extend({
           status: "",
         };
         this.gradient.push(jsonObject);
-        this.$cookies.set("test", JSON.stringify(this.gradient), "3d");
+        this.$cookies.set("test", JSON.stringify(this.gradient), "30d");
         this.getTrackData(
           this.company,
           this.code,
@@ -197,7 +197,7 @@ export default Vue.extend({
     },
     removeGradient(index: number) {
       this.gradient.splice(index, 1);
-      this.$cookies.set("test", JSON.stringify(this.gradient), "3d");
+      this.$cookies.set("test", JSON.stringify(this.gradient), "30d");
     },
     async getTrackData(companyID: string, TrackID: string, gradientID: number) {
       try {

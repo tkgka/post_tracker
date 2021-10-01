@@ -84,27 +84,27 @@
             </div>
           </div>
         </div>
-
-        <div v-for="(data, index) in gradient" :key="index">
-          <div class="card lg:card-side bordered">
-            <div class="card-body">
-              <div class="justify-end card-actions">
-                <span @click="removeGradient(index)" class="chip-remove"
-                  >&times;</span
-                >
-              </div>
-              <h2 class="card-title">{{ data.name }}</h2>
-              <span> 운송장 번호 : {{ data.code }}</span>
-              <span>{{ data.status }}</span>
-              <div class="card-actions">
-                <a :href="data.link" target="_blank">
-                  <button class="btn btn-primary">More info</button>
-                </a>
+        <div class="inputs">
+          <div v-for="(data, index) in gradient" :key="index">
+            <div class="card lg:card-side bordered">
+              <div class="card-body">
+                <div class="justify-end card-actions">
+                  <span @click="removeGradient(index)" class="chip-remove"
+                    >&times;</span
+                  >
+                </div>
+                <h2 class="card-title">{{ data.name }}</h2>
+                <span> 운송장 번호 : {{ data.code }}</span>
+                <span>{{ data.status }}</span>
+                <div class="card-actions">
+                  <a :href="data.link" target="_blank">
+                    <button class="btn btn-primary">More info</button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
         <div v-if="gradient.length < 1">
           <div class="card lg:card-side bordered">
             <div class="card-body">

@@ -106,7 +106,7 @@
         </div>
 
         <div v-if="gradient.length < 1">
-          <div class="card lg:card-side bordered ">
+          <div class="card lg:card-side bordered">
             <div class="card-body">
               <h2 class="card-title">택배를 추가해 주세요!</h2>
             </div>
@@ -158,6 +158,9 @@ export default Vue.extend({
     },
   },
   methods: {
+    makeCookie() {
+      this.$cookies.set("test", JSON.stringify(this.gradient), "30d");
+    },
     cleanAll() {
       this.name = "";
       this.code = "";
@@ -174,7 +177,7 @@ export default Vue.extend({
           status: "",
         };
         this.gradient.push(jsonObject);
-        this.$cookies.set("test", JSON.stringify(this.gradient), "30d");
+        this.makeCookie();
         this.getTrackData(
           this.company,
           this.code,
@@ -197,7 +200,7 @@ export default Vue.extend({
     },
     removeGradient(index: number) {
       this.gradient.splice(index, 1);
-      this.$cookies.set("test", JSON.stringify(this.gradient), "30d");
+      this.makeCookie();
     },
     async getTrackData(companyID: string, TrackID: string, gradientID: number) {
       try {

@@ -18,7 +18,6 @@ jobs:
         uses: actions/setup-node@master
 
       - run: yarn
-      - run: yarn cname
   
 #       - run: yarn lint
 
@@ -34,7 +33,6 @@ jobs:
         uses: actions/setup-node@master
 
       - run: yarn
-      - run: yarn cname
       - run: yarn build
 
       - working-directory: docs

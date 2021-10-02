@@ -1,12 +1,12 @@
 {
   "name": "post_tracker",
   "version": "0.1.0",
-  "homepage": "/",
+  "homepage": "https://post.oozoo.site",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "cname": "echo post.oozoo.site > build\\CNAME",
+    "cname": "echo post.oozoo.site > \\CNAME",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

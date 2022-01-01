@@ -5,16 +5,19 @@
   </div>
 </template>
 
-<script lang="ts">
-import Header from "./layout/Header.vue"
+<script>
+import Header from "./layout/Header.vue";
 import Main from "./layout/main.vue";
-
+import apollo_client from "./graphql/server_conn";
 export default {
   name: "App",
   components: {
     Header,
-    Main,
+    Main
   },
+  created() {
+    apollo_client(navigator.userAgentData.brands);
+  }
 };
 </script>
 

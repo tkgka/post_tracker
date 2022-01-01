@@ -125,7 +125,7 @@ import getTrack from "../components/getTrack";
 export default Vue.extend({
   name: "App",
   components: {
-    ...icons,
+    ...icons
   },
   data() {
     return {
@@ -137,7 +137,7 @@ export default Vue.extend({
       errorAlert: false,
       modal: false,
       errorValue: "",
-      Completed: "",
+      Completed: ""
     };
   },
   created() {
@@ -155,7 +155,7 @@ export default Vue.extend({
       } else if (this.errorAlert == true) {
         this.modal = true;
       }
-    },
+    }
   },
   methods: {
     makeCookie() {
@@ -174,7 +174,7 @@ export default Vue.extend({
           code: this.code,
           company: this.company,
           link: `https://tracker.delivery/#/${this.company}/${this.code}`,
-          status: "",
+          status: ""
         };
         this.gradient.push(jsonObject);
         this.makeCookie();
@@ -182,7 +182,7 @@ export default Vue.extend({
           this.company,
           this.code,
           this.gradient.length - 1
-        ).then((val) => {
+        ).then(val => {
           if (val != 200) {
             this.errorAlert = true;
             this.errorValue =
@@ -218,8 +218,8 @@ export default Vue.extend({
         await this.getTrackData(i.company, i.code, num);
         num++;
       }
-    },
-  },
+    }
+  }
 });
 </script>
 <style scoped>

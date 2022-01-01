@@ -129,6 +129,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      // eslint-disable-next-line
       gradient: [] as any,
       code: "",
       company: "",

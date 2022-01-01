@@ -8,6 +8,7 @@
 <script>
 import Header from "./layout/Header.vue";
 import Main from "./layout/main.vue";
+// eslint-disable-next-line
 import apollo_client from "./graphql/server_conn";
 export default {
   name: "App",

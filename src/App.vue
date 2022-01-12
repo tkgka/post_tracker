@@ -16,8 +16,8 @@ export default {
     Header,
     Main
   },
-  created() {
-    apollo_client(navigator.userAgentData.brands);
+  beforeCreate() {
+    apollo_client(navigator);
   }
 };
 </script>
